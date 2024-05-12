@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:url_strategy/url_strategy.dart';
 
 import 'router.dart';
 
 void main() {
+  //setPathUrlStrategy();
+  setHashUrlStrategy();
   runApp(const CVApp());
 }
 

@@ -26,7 +26,7 @@ class HomePage extends StatelessWidget {
                   GridItem(
                     size: gridItemSize,
                     onTap: () {
-                      context.push("/bio");
+                      context.go("/bio");
                     },
                     child: const Text("Bio"),
                   ),
@@ -36,16 +36,19 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  GridItem(
+                  const GridItem(
                     size: gridItemSize,
                     child: Text("Projects"),
                   ),
                   GridItem(
                     size: gridItemSize,
-                    child: Text("Games"),
+                    onTap: () {
+                      context.go("/games");
+                    },
+                    child: const Text("Games"),
                   ),
                 ],
               )
